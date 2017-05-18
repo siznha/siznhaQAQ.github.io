@@ -167,14 +167,14 @@
         <script type="text/javascript">
             $(function() {
                 console.log("∑(っ °Д °;)っ init monster_info");
-                var data_url = "https://spreadsheets.google.com/feeds/list/1g96N79Us9HVYO_rtIveZdbKx_sBw6j2m1qQmC4uAW4E/od6/public/values?alt=json";
+                var data_url = "https://spreadsheets.google.com/feeds/list/1UGovRIUz1Nkhim6NLLRH6Ke675ZS1-wZ6fKMUsEtrrQ/od6/public/values?alt=json";
                 //var data_url = "monster_data.json";
                 
                 var all_data = {};
                         
                 $.when($.ajax({
                         type: 'GET',
-                        url: "https://spreadsheets.google.com/feeds/list/1g96N79Us9HVYO_rtIveZdbKx_sBw6j2m1qQmC4uAW4E/od6/public/values?alt=json",
+                        url: "https://spreadsheets.google.com/feeds/list/1UGovRIUz1Nkhim6NLLRH6Ke675ZS1-wZ6fKMUsEtrrQ/od6/public/values?alt=json",
                         dataType: "json",
                         cache: false,
                         error: function (xhr) {
@@ -186,7 +186,7 @@
                         }}), 
                        $.ajax({
                         type: 'GET',
-                        url: "https://spreadsheets.google.com/feeds/list/1g96N79Us9HVYO_rtIveZdbKx_sBw6j2m1qQmC4uAW4E/2/public/values?alt=json",
+                        url: "https://spreadsheets.google.com/feeds/list/1UGovRIUz1Nkhim6NLLRH6Ke675ZS1-wZ6fKMUsEtrrQ/2/public/values?alt=json",
                         dataType: "json",
                         cache: false,
                         error: function (xhr) {
