@@ -1,0 +1,287 @@
+<!--
+    genmono tools v2 beta | (c) 2015 | ∑(っ °Д °;)っ 20150125
+    author heroboy999 heroboy999@gmail.com
+    ##################################################
+    ##############################,,;#################
+    #############################;,,,;##t#############
+    ############################,,,,,,,,;;############
+    ############################,,,i,,,,,;;###########
+    ###########;;,,;############,,:;j,,,,,,i##########
+    ###########;,,,,,,,########i,:j:j::,,,,iit########
+    ##########;,,,::::,,#######,,:.......::,,;;#######
+    ###########,,,:...::########,,::::...:,,,,;#######
+    ################:.################..:j,,,#########
+    ################j.################...:,,,#########
+    #################i###############:..::,,,#########
+    ################################:..####,,#########
+    #######;;,,####################.##################
+    #######,;:,###########f###########################
+    #######,:..##...####L#GDDDD#######################
+    #######::.....######DDGfLGDGf#####################
+    ###,###..:;########LfLDGLDLfDD###########,,,,#####
+    #i;,,##..########fGLDGLfjfDGDGf##########,,,,t####
+    #;,,,..,#########GfffftffjffGfD########..:,ii#####
+    #;,,,..#########LGGfffjfjffffLDG##################
+    #t,jj..#######fffGLLffjtttjffLDGGG################
+    ###:...########GfffLLffttttfffLGG############i####
+    ###,:..########fftfGGfLjtjtffjfLL######..####;;###
+    ##,,,..########jttjLLftjfjffttLLLf#######.:,,,,;##
+    #,,,,..#######ftjtLtffjtttfftjLLLf########.,,;,;##
+    #####:,#######jtffjfffffffffLLGDLLD########.:ii,;#
+    #####:;#######jtffffjffffffLLGGGGGGDL######..,,,;#
+    ####,,#######DjtttttfffffLLGGGLLLLL########..,,i##
+    ##;,:,########fttttfffffLLGGGGGLffG########..,,;t#
+    #i,,:.#########GfLGGffffLGGGGDGLLG#########::,,,;#
+    #i,,,.,##.######fD,fGfffLGGGG;Lt##########.,,,,,;#
+    ##;,,:.#...#######fLjDLLLGGGjfL########..:,,,;####
+    ##i,,,:....#########GGGGGGGG##########:.##########
+    ###;,,,....#########################::############
+    ####;,,:..########################,::#############
+    #####;,,:..####################;,,:.##############
+    #######,:..###################i,,:..##############
+    ########,::.##################,,.::###############
+    ###########::#################::.:################
+    ############################..####################
+    ###########################:.#####################
+    ##################################################
+        
+-->
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="heroboy999" name="author">
+        <title>幻獸物語2 工具箱</title>
+        <meta content="website" property="og:type">
+        <meta name="keywords" content="幻獸物語2,幻獣物語２">
+        <meta content="幻獸物語2 工具箱" property="og:title">
+        <meta content="提供簡單小工具" property="og:description">
+        <meta content="" property="og:image">
+        <meta content="http://shesheshe.github.io/genmono/" property="og:url">
+        <meta content="提供簡單小工具" name="description">
+        <meta content="幻獸物語2 工具箱" name="twitter:title">
+        <meta content="提供簡單小工具" name="twitter:description">
+        <meta content="幻獸物語2 工具箱" name="twitter:title">
+        <meta content="提供簡單小工具" name="twitter:description">
+        <meta content="" name="twitter:image:src">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap-select.min.css">
+        <style type="text/css">
+            table td {
+                vertical-align: middle !important;
+                text-align: center !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav"></div>
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+            <div class="row show-grid">
+                <div class="col-md-12">
+                    <!--<select class="selectpicker" id="class">
+                        <option value="">請選擇(class)</option>
+                        <option value="normal">一般</option>
+                        <option value="day">曜日</option>
+                        <option value="activity">限定</option>
+                    </select>-->
+                    <table id="accordion" class="table table-bordered">
+                    </table>    
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+        <div id="modal_popup"></div>
+        
+        <script type="text/javascript" src="js/angular.min.js"> </script>
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap-select.min.js"> </script>
+        <script type="text/javascript" src="js/i18n/defaults-zh_TW.min.js"> </script>
+        <script type="text/javascript">
+            $(function() {
+                console.log("∑(っ °Д °;)っ init index");
+                
+                console.log("##################################################");
+                console.log("##############################,,;#################");
+                console.log("#############################;,,,;##t#############");
+                console.log("############################,,,,,,,,;;############");
+                console.log("############################,,,i,,,,,;;###########");
+                console.log("###########;;,,;############,,:;j,,,,,,i##########");
+                console.log("###########;,,,,,,,########i,:j:j::,,,,iit########");
+                console.log("##########;,,,::::,,#######,,:.......::,,;;#######");
+                console.log("###########,,,:...::########,,::::...:,,,,;#######");
+                console.log("################:.################..:j,,,#########");
+                console.log("################j.################...:,,,#########");
+                console.log("#################i###############:..::,,,#########");
+                console.log("################################:..####,,#########");
+                console.log("#######;;,,####################.##################");
+                console.log("#######,;:,###########f###########################");
+                console.log("#######,:..##...####L#GDDDD#######################");
+                console.log("#######::.....######DDGfLGDGf#####################");
+                console.log("###,###..:;########LfLDGLDLfDD###########,,,,#####");
+                console.log("#i;,,##..########fGLDGLfjfDGDGf##########,,,,t####");
+                console.log("#;,,,..,#########GfffftffjffGfD########..:,ii#####");
+                console.log("#;,,,..#########LGGfffjfjffffLDG##################");
+                console.log("#t,jj..#######fffGLLffjtttjffLDGGG################");
+                console.log("###:...########GfffLLffttttfffLGG############i####");
+                console.log("###,:..########fftfGGfLjtjtffjfLL######..####;;###");
+                console.log("##,,,..########jttjLLftjfjffttLLLf#######.:,,,,;##");
+                console.log("#,,,,..#######ftjtLtffjtttfftjLLLf########.,,;,;##");
+                console.log("#####:,#######jtffjfffffffffLLGDLLD########.:ii,;#");
+                console.log("#####:;#######jtffffjffffffLLGGGGGGDL######..,,,;#");
+                console.log("####,,#######DjtttttfffffLLGGGLLLLL########..,,i##");
+                console.log("##;,:,########fttttfffffLLGGGGGLffG########..,,;t#");
+                console.log("#i,,:.#########GfLGGffffLGGGGDGLLG#########::,,,;#");
+                console.log("#i,,,.,##.######fD,fGfffLGGGG;Lt##########.,,,,,;#");
+                console.log("##;,,:.#...#######fLjDLLLGGGjfL########..:,,,;####");
+                console.log("##i,,,:....#########GGGGGGGG##########:.##########");
+                console.log("###;,,,....#########################::############");
+                console.log("####;,,:..########################,::#############");
+                console.log("#####;,,:..####################;,,:.##############");
+                console.log("#######,:..###################i,,:..##############");
+                console.log("########,::.##################,,.::###############");
+                console.log("###########::#################::.:################");
+                console.log("############################..####################");
+                console.log("###########################:.#####################");
+                console.log("##################################################");
+                
+                show_dungeon_list(dungeon_data());
+                
+                $("#nav").load("nav.html");
+                $("#footer").load("footer.html");
+                $("#modal_popup").load("modal_popup.html");
+                
+                //event
+                $("select#class").change(function() {
+                    var data = show_dungeon_list($(this).val());
+                    $("table.table").html("");
+                    show_dungeon_list(data);
+                });
+                
+                function show_dungeon_list(data) {
+                    var row = data.list.length;
+                    var TableData = "<tr class='danger' ><td>圖片</td><td>名稱</td><td>開放等級</td><td>探索時間</td><td>平均exp</td><td>備註</td></tr>";
+
+                    for (var i = 0; i < row; i++) {
+                        if((i+1)%2 != 0) {
+                            TableData += "<tr href='#demo" + i + "' data-toggle='collapse' data-parent='#accordion'>";
+                        } else {
+                            TableData += "<tr class=\"info\" href='#demo" + i + "' data-toggle='collapse' data-parent='#accordion'>";
+                        }
+                        
+                        TableData += "<td>" + (data.list[i].img||"") + "</td>";
+                        TableData += "<td>" + data.list[i].name + "</td>";
+                        TableData += "<td>" + data.list[i].lv + "</td>";
+                        TableData += "<td>" + data.list[i].time + "</td>";
+                        TableData += "<td>" + data.list[i].exp + "</td>";
+                        TableData += "<td>" + (data.list[i].ps||"") + "</td>";
+                        TableData += "</tr>";
+                        
+                        TableData += "<tr id='demo" + i + "' class='collapse'>";
+                        TableData += "<td colspan='6'>";
+                        
+                        if(data.list[i].get !== undefined) {
+                            TableData += "<table id='item' class='table table-bordered'>";
+                            TableData += "<tr class='active'><td>圖片</td><td>名稱</td><td>總類</td><td>機率</td></tr>";
+                            for(var j in data.list[i].get) {
+                                tmp = select_item_list(data.list[i].get[j]);
+                                TableData += "<tr><td>" + "" + "</td>";
+                                TableData += "<td>" + tmp['name'] + "</td>";
+                                TableData += "<td>" + tmp['kind'] + "</td>";
+                                TableData += "<td>" + tmp['pre'] + "</td></tr>";
+                            }
+                            TableData += "</table>";
+                        } else {
+                            TableData += "增加中...";
+                        }
+                        TableData += "</td></tr>";
+                    }
+                    $("table.table").append(TableData);                
+                }
+
+                function select_item_list(_no) {
+                    var data = item_data(), len = data.list.length, newdata = "";
+                    if(_no == "all"){ return data; }
+                    for(var i=0; i<len; i++) {
+                        if(data.list[i].no == _no) {
+                            return data.list[i];
+                        }
+                    }
+                }
+                
+            });
+            
+            
+            function dungeon_data() {
+                var alldata = {"list":[
+                                        {"no":"1","name":"初心者の森","lv":"5","time":"5","exp":"5","type":"normal","get":["1","2"]},
+                                        {"no":"2","name":"荒れ平原","lv":"5","time":"5","exp":"5","type":"normal","get":["1","2"]},
+                                        {"no":"3","name":"広大な砂漠","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"4","name":"孤独の森","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"5","name":"肝試しの道(孤独の森 裝備[浴衣])","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"6","name":"静かな海辺","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"7","name":"砂漠のオアシス","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"8","name":"雪の洞窟","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"9","name":"廃虚となった町","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"10","name":"セカチュ岬","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"11","name":"悪魔の洞窟","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"12","name":"幻獣園","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"13","name":"忘れられた炭坑","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"14","name":"再起の港","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"15","name":"大吹雪の森","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"16","name":"暗黒の町","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"17","name":"火山地帯の温泉","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"18","name":"謎の沈没船","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"19","name":"時計塔がある街","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"20","name":"深海への入り口","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"21","name":"妖骨の洞窟","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"22","name":"最果ての跡地","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"23","name":"氷点下の洞窟","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"24","name":"嵐舞う大地","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"25","name":"灼熱地獄","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"26","name":"魔界樹の森","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"27","name":"神蔵","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"28","name":"勇者の墓地","lv":"5","time":"5","exp":"5","type":"normal"},
+                                        {"no":"28","name":"鈍く光る鉱山","lv":"5","time":"5","exp":"5","type":"day"},
+                                        {"no":"28","name":"金に輝く洞窟","lv":"5","time":"5","exp":"5","type":"day"},
+                                        {"no":"28","name":"月曜日ダンジョン","lv":"5","time":"5","exp":"5","type":"day"},
+                                        {"no":"28","name":"水曜日ダンジョン","lv":"5","time":"5","exp":"5","type":"day"},
+                                        {"no":"28","name":"金曜日ダンジョン","lv":"5","time":"5","exp":"5","type":"day"},
+                                        {"no":"28","name":"お祭り会場","lv":"5","time":"5","exp":"5","type":"activity","ps":"活動限定"},
+                                        {"no":"28","name":"灯籠流しの川","lv":"5","time":"5","exp":"5","type":"activity","ps":"活動限定"},
+                                        {"no":"28","name":"朽ちた都","lv":"5","time":"5","exp":"5","type":"activity","ps":"活動限定"},
+                                        {"no":"28","name":"輝きの都","lv":"5","time":"5","exp":"5","type":"activity","ps":"活動限定"},
+                                        {"no":"28","name":"夕焼けに染まる丘","lv":"5","time":"5","exp":"5","type":"activity","ps":"公會製作"},
+                ]};
+                return alldata;
+            }
+            
+            function item_data() {
+                var alldata = {"list":[
+                    {"no":"1","name":"石ころ","kind":"收集","pre":"55.36%"},
+                    {"no":"2","name":"鉄のかけら","kind":"收集","pre":"25.75%"},
+                ]};
+                return alldata;
+            }
+            
+            
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50817771-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

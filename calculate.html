@@ -1,0 +1,701 @@
+<!--
+    genmono tools v2 beta | (c) 2015 | ∑(っ °Д °;)っ 20150125
+    author heroboy999 heroboy999@gmail.com
+    ##################################################
+    ##############################,,;#################
+    #############################;,,,;##t#############
+    ############################,,,,,,,,;;############
+    ############################,,,i,,,,,;;###########
+    ###########;;,,;############,,:;j,,,,,,i##########
+    ###########;,,,,,,,########i,:j:j::,,,,iit########
+    ##########;,,,::::,,#######,,:.......::,,;;#######
+    ###########,,,:...::########,,::::...:,,,,;#######
+    ################:.################..:j,,,#########
+    ################j.################...:,,,#########
+    #################i###############:..::,,,#########
+    ################################:..####,,#########
+    #######;;,,####################.##################
+    #######,;:,###########f###########################
+    #######,:..##...####L#GDDDD#######################
+    #######::.....######DDGfLGDGf#####################
+    ###,###..:;########LfLDGLDLfDD###########,,,,#####
+    #i;,,##..########fGLDGLfjfDGDGf##########,,,,t####
+    #;,,,..,#########GfffftffjffGfD########..:,ii#####
+    #;,,,..#########LGGfffjfjffffLDG##################
+    #t,jj..#######fffGLLffjtttjffLDGGG################
+    ###:...########GfffLLffttttfffLGG############i####
+    ###,:..########fftfGGfLjtjtffjfLL######..####;;###
+    ##,,,..########jttjLLftjfjffttLLLf#######.:,,,,;##
+    #,,,,..#######ftjtLtffjtttfftjLLLf########.,,;,;##
+    #####:,#######jtffjfffffffffLLGDLLD########.:ii,;#
+    #####:;#######jtffffjffffffLLGGGGGGDL######..,,,;#
+    ####,,#######DjtttttfffffLLGGGLLLLL########..,,i##
+    ##;,:,########fttttfffffLLGGGGGLffG########..,,;t#
+    #i,,:.#########GfLGGffffLGGGGDGLLG#########::,,,;#
+    #i,,,.,##.######fD,fGfffLGGGG;Lt##########.,,,,,;#
+    ##;,,:.#...#######fLjDLLLGGGjfL########..:,,,;####
+    ##i,,,:....#########GGGGGGGG##########:.##########
+    ###;,,,....#########################::############
+    ####;,,:..########################,::#############
+    #####;,,:..####################;,,:.##############
+    #######,:..###################i,,:..##############
+    ########,::.##################,,.::###############
+    ###########::#################::.:################
+    ############################..####################
+    ###########################:.#####################
+    ##################################################
+        
+-->
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="heroboy999" name="author">
+        <title>幻獸物語2 工具箱</title>
+        <meta content="website" property="og:type">
+        <meta name="keywords" content="幻獸物語2,幻獣物語２">
+        <meta content="幻獸物語2 工具箱" property="og:title">
+        <meta content="提供簡單小工具" property="og:description">
+        <meta content="" property="og:image">
+        <meta content="http://shesheshe.github.io/genmono/" property="og:url">
+        <meta content="提供簡單小工具" name="description">
+        <meta content="幻獸物語2 工具箱" name="twitter:title">
+        <meta content="提供簡單小工具" name="twitter:description">
+        <meta content="幻獸物語2 工具箱" name="twitter:title">
+        <meta content="提供簡單小工具" name="twitter:description">
+        <meta content="" name="twitter:image:src">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="css/jquery-ui.min.css">
+        <style type="text/css">
+            img.big {
+                height: 50px;
+                width: 50px;
+            }
+            img.small {
+                height: 40px;
+                width: 40px;
+            }
+            img.xsmall {
+                height: 20px;
+                width: 20px;
+            }
+            .table td {
+                vertical-align: middle !important;
+                text-align: center !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav"></div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <select class="#" id="evolution">
+                        <option value="">請選擇(下位)</option>
+                    </select> <font color="#f00" size="4">or</font> 
+                    <select class="#" id="evolution2">
+                        <option value="">請選擇(上位)</option>
+                    </select>
+                    </p>
+                    <table class="table table-bordered one">
+                    </table>    
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        status
+                    </h3>
+                </div>
+                <div class="panel-body status"  style="position: relative;">
+                    <select class="selectpicker" id="skill1" attr="1">
+                        <option value="">請選擇</option>
+                        <option value="加護">加護</option>
+                        <option value="誘惑">誘惑</option>
+                        <option value="惡戲">惡戲</option>
+                        <option value="冥想">冥想</option>
+                        <option value="天運">天運(強化數+5)</option>
+                        <option value="成長">成長</option>
+                        <option value="持久">持久</option>
+                        <option value="強固">強固</option>
+                        <option value="頑固">頑固</option>
+                        <option value="激運">激運</option>
+                        <option value="底力">底力</option>
+                        <option value="鉄壁">鉄壁</option>
+                        
+                    </select>
+                    <div id="skill1_detail" style="display:inline-block;">*</div>
+                    <br />
+                    <br />
+                    <select class="selectpicker" id="skill2" attr="2">
+                        <option value="">請選擇</option>
+                        <option value="加護">加護</option>
+                        <option value="誘惑">誘惑</option>
+                        <option value="惡戲">惡戲</option>
+                        <option value="冥想">冥想</option>
+                        <option value="天運">天運(強化數+5)</option>
+                        <option value="成長">成長</option>
+                        <option value="持久">持久</option>
+                        <option value="強固">強固</option>
+                        <option value="頑固">頑固</option>
+                        <option value="激運">激運</option>
+                        <option value="底力">底力</option>
+                        <option value="鉄壁">鉄壁</option>
+                    </select>
+                    <div id="skill2_detail" style="display:inline-block;">*</div>
+                    <br />
+                    <br />
+                    <input type="button" class="enter" value="enter"/>
+                    <input type="button" class="clear" value="clear"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <tr class="danger">
+                            <td width="5%"></td>
+                            <td width="5%">固有值</td>
+                            <td width="10%">點數</td>
+                            <td width="10%">能力</td>
+                            <td width="10%">技能修正</td>
+                            <td width="60%">調整</td>
+                        </tr>
+                        <tr>
+                            <td width="5%">stamina</td>
+                            <td width="5%"><div id="stamina_base"></div></td>
+                            <td width="10%"><div id="stamina_base2">1</div></td>
+                            <td width="10%"><div id="stamina_base3"></div></td>
+                            <td width="10%"><div id="stamina_base4"></div></td>
+                            <td width="60%">
+                                <div><input class="des" type="button" value="-1" attr="s"/></div>
+                                <div id="stamina_event"></div>
+                                <div><input class="add" type="button" value="+1" attr="s"/></div>
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td width="5%">attack</td>
+                            <td width="5%"><div id="attack_base"></div></td>
+                            <td width="10%"><div id="attack_base2">1</div></td>
+                            <td width="10%"><div id="attack_base3"></div></td>
+                            <td width="10%"><div id="attack_base4"></div></td>
+                            <td width="60%">
+                                <div><input class="des" type="button" value="-1" attr="a"/></div>
+                                <div id="attack_event"></div>
+                                <div><input class="add" type="button" value="+1" attr="a"/></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%">defense</td>
+                            <td width="5%"><div id="defense_base"></div></td>
+                            <td width="10%"><div id="defense_base2">1</div></td>
+                            <td width="10%"><div id="defense_base3"></div></td>
+                            <td width="10%"><div id="defense_base4"></div></td>
+                            <td width="60%">
+                                <div><input class="des" type="button" value="-1" attr="d"/></div>
+                                <div id="defense_event"></div>
+                                <div><input class="add" type="button" value="+1" attr="d"/></div>
+                            </td>
+                        </tr>
+                        <tr class="info">
+                            <td width="5%">luck</td>
+                            <td width="5%"><div id="luck_base"></div></td>
+                            <td width="10%"><div id="luck_base2">1</div></td>
+                            <td width="10%"><div id="luck_base3"></div></td>
+                            <td width="10%"><div id="luck_base4"></div></td>
+                            <td width="60%">
+                                <div><input class="des" type="button" value="-1" attr="l"/></div>
+                                <div id="luck_event"></div>
+                                <div><input class="add" type="button" value="+1" attr="l"/></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="5%"></td>
+                            <td width="5%"></td>
+                            <td width="10%"><div id="total">0</div></td>
+                            <td width="10%"></td>
+                            <td width="10%"></td>
+                            <td width="60%"></td>
+                        </tr>                            
+                    </table>
+                </div>
+                <!--<div class="col-md-12">
+                    <table class="table table-bordered">
+                        <tr>
+                            <td><input type="button" value="單誘惑" attr="single_temptation"/></td>
+                            <td><input type="button" value="雙誘惑" attr="double_temptation"/></td>
+                            <td><input type="button" value="單惡戲" attr="single_dalliance"/></td>
+                            <td><input type="button" value="雙惡戲" attr="double_dalliance"/></td>
+                            <td><input type="button" value="取消技能狀態" attr="test"/></td>
+                            <td><input type="button" value="---" attr="test"/></td>
+                        </tr>
+                    </table>
+                </div>-->
+            </div>
+        </div>
+        
+        <div id="footer"></div>
+        <div id="modal_popup"></div>
+
+        <script type="text/javascript" src="js/angular.min.js"> </script>
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap-select.min.js"> </script>
+        <script type="text/javascript" src="js/i18n/defaults-zh_TW.min.js"> </script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"> </script>
+        <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"> </script>
+        <script type="text/javascript">
+            
+            $(function() {
+                console.log("∑(っ °Д °;)っ init monster_info");
+
+                $.ajax({
+                    type: 'GET',
+                    url: 'monster_data.json',
+                    dataType: "json",
+                    cache: false,
+                    error: function (xhr) {
+                        //console.log("error");
+                    },
+                    success: function (response) {
+                        //console.log("success");
+                        var alldata = response,
+                            skill1 = "",
+                            skill2 = "";
+                        
+                        $("#nav").load("nav.html");
+                        $("#footer").load("footer.html");
+                        $("#modal_popup").load("modal_popup.html");
+                        
+                        var skill_type = "";
+                        
+                        var stamina = $("div#stamina_event").slider({
+                            max:999,
+                            min:1,
+                            value:1,
+                            slide: function( event, ui ) {
+                                set_calculate("stamina_base", ui.value);
+                            }
+                        });
+
+                        var attack = $("div#attack_event").slider({
+                            max:999,
+                            min:1,
+                            slide: function( event, ui ) {
+                                set_calculate("attack_base", ui.value);
+                            }
+                        });
+                        
+                        var defense = $("div#defense_event").slider({
+                            max:999,
+                            min:1,
+                            slide: function( event, ui ) {
+                                set_calculate("defense_base", ui.value);
+                            }
+                        });
+                        
+                        var luck = $("div#luck_event").slider({
+                            max:999,
+                            min:1,
+                            slide: function( event, ui ) {
+                                set_calculate("luck_base", ui.value);                              
+                            }
+                        });
+                        
+                        var value_list = {
+                            "s":["stamina_base", stamina],
+                            "a":["attack_base", attack],
+                            "d":["defense_base", defense],
+                            "l":["luck_base", luck], 
+                        };
+                        
+                        $("input.des, .add").on("click", function() {
+                            var val = value_list[$(this).attr("attr")][1].slider('value'),
+                                exec = value_list[$(this).attr("attr")][1],
+                                class_name = value_list[$(this).attr("attr")][0],
+                                class_name2 = $(this).attr("class");
+                                
+                            if(class_name2 == "add") {
+                                val += 1;
+                            } else {
+                                val -= 1;
+                            }
+
+                            exec.slider('value', val);
+                            set_calculate(class_name, val);
+                        });
+
+                        function set_calculate(tag, value) {
+                            $("div#" + tag + "2").html(value);
+                                $("div#" + tag + "3").html(Math.round($("div#" + tag + "").html() * value));
+                                $("div#total").html(parseInt($("div#stamina_base2").html()) + 
+                                                    parseInt($("div#attack_base2").html()) + 
+                                                    parseInt($("div#defense_base2").html()) +
+                                                    parseInt($("div#luck_base2").html()));
+                                                    
+                            $("input.enter").trigger("click");
+                        }
+                        
+                        
+                        //init
+                        get_monster_for_select();
+
+                        $("input.enter").on('click', function() {
+                            s = parseInt($("div#stamina_base3").html()) || 0,
+                            a = parseInt($("div#attack_base3").html()) || 0,
+                            d = parseInt($("div#defense_base3").html()) || 0;
+                            l = parseInt($("div#luck_base3").html()) || 0;
+                            
+                            skill1 = $("#skill1 option:selected").val();
+                            skill2 = $("#skill2 option:selected").val();
+                            list = [skill1, skill2];
+
+                            tmp = [s, a, d, l];
+                            for(var i in list) {
+                                if(list[i] != "") {
+                                    tmp = calculate_core(list[i], tmp[0], tmp[1], tmp[2], tmp[3]);
+                                }
+                            }
+
+                            $("div#stamina_base4").html(tmp[0]);
+                            $("div#attack_base4").html(tmp[1]);
+                            $("div#defense_base4").html(tmp[2]);
+                            $("div#luck_base4").html(tmp[3]);
+                        });
+
+                        $("input.clear").on('click', function() {
+                            $("#skill1, #skill2").children().each(function(){
+                                if ($(this).text() == "請選擇") {
+                                    $(this).attr("selected", "true");
+                                }
+                            });
+                            $("div.status .filter-option").html("請選擇");
+                            
+                            s = parseInt($("div#stamina_base3").html()) || 0,
+                            a = parseInt($("div#attack_base3").html()) || 0,
+                            d = parseInt($("div#defense_base3").html()) || 0;
+                            l = parseInt($("div#luck_base3").html()) || 0;
+                            
+                            $("div#stamina_base4").html(s);
+                            $("div#attack_base4").html(a);
+                            $("div#defense_base4").html(d);
+                            $("div#luck_base4").html(l);
+                            
+                            $("div#skill1_detail,#skill2_detail").html("*");
+                            
+                        });
+                        
+                        function calculate_core(type, s, a, d, l) {
+                            var tmp = [],
+                            tmp = skill_list(type, s, a, d, l);
+                            return [tmp[0], tmp[1], tmp[2], tmp[3]];
+                        }
+                        
+                        //加護 s a d 加10%
+                        //誘惑 s 20% to a
+                        //惡戲 d 20% to s a
+                        //冥想 d 15%*6.6 to s, l + ??
+                        //天運 l + (強化數 * 5)
+                        
+                        function skill_list(skill_name, s, a, d, l) {
+                        
+                            var skill_lists = {
+                                "加護":[parseInt(s * 1.10), parseInt(a * 1.10), parseInt(d * 1.10), l],
+                                "誘惑":[parseInt(s - (s * 0.20)), parseInt(a + (s * 0.20)), d, l],
+                                "惡戲":[parseInt(s + (d * 0.20)), parseInt(a + (d * 0.20)), parseInt(d - (d * 0.20)), l],
+                                "冥想":[parseInt(s + ((d * 0.15) * 6.60)), parseInt(a), parseInt(d - (d * 0.15)), l],
+                                "天運":[s, a, d, l + (parseInt(Math.random() * 20 + 1) * 5)],
+                                "成長":[s + 3000, a, d, l],
+                                "持久":[parseInt(s + (s * 0.15)), a, d, l],
+                                "強固":[s, a, d + 50, l],
+                                "頑固":[s, a, parseInt(d + (d * 0.10)), l],
+                                "激運":[s, a, d, l + 50],
+                                "底力":[parseInt(s + (s * 0.20)), a, d, l],
+                                "鉄壁":[s, a, parseInt(d + (d * 0.15)), l],
+                            };
+                            
+                            return skill_lists[skill_name];
+                        }
+                        
+                        $("select#skill1,#skill2").change(function() {
+                            var skill_lists = {
+                                "加護":"討伐開始直後から終了まで、Luck以外のステータスが10%増加する。",
+                                "誘惑":"討伐開始直後から終了まで、Staminaが20%減少する。減少したStamina分、Attackに加算される。",
+                                "惡戲":"討伐開始直後から終了まで、Defenceが20%減少する。減少したDefence分、StaminaとAttackに加算される。",
+                                "冥想":"討伐開始直後から終了まで、Defenceを15%減少させ、その分の数倍をStaminaに加算、Luckも微量に増加。",
+                                "天運":"討伐開始直後から終了まで、強化数に応じたLuckが加算される。Luckの加算値は +0~+100。",
+                                "成長":"討伐開始直後から終了まで、Staminaが300加算される。",
+                                "持久":"討伐開始直後から終了まで、Staminaが15%増加する。",
+                                "強固":"討伐開始直後から終了まで、Defenseが50加算される。",
+                                "頑固":"討伐開始直後から終了まで、Defenseが10%増加する。",
+                                "激運":"討伐開始直後から終了まで、Luckが50加算される。",
+                                "底力":"討伐開始直後から終了まで、Staminaが20%増加する。",
+                                "鉄壁":"討伐開始直後から終了まで、Defenseが15%増加する。",
+                            };
+                            
+                            $("div#skill" + $(this).attr("attr") + "_detail").html(skill_lists[$(this).val()]);
+                        });
+                        
+                        $("select#evolution,#evolution2").change(function() {
+                            var data = monster_data(), row = data.list.length, _no = $(this).val(), temp = {"list":[]};
+                            
+                            for (var i = 0; i < row; i++) {
+                                if(data.list[i].no == _no) {
+                                    temp.list[0] = data.list[i];
+                                }
+                            }
+
+                            $("div#stamina_base").html(temp.list[0].S);
+                            $("div#attack_base").html(temp.list[0].A);
+                            $("div#defense_base").html(temp.list[0].D);
+                            $("div#luck_base").html(temp.list[0].L);
+
+                            $("div#stamina_base3").html(Math.round($("div#stamina_base2").html() * temp.list[0].S));
+                            $("div#attack_base3").html(Math.round($("div#attack_base2").html() * temp.list[0].A));
+                            $("div#defense_base3").html(Math.round($("div#defense_base2").html() * temp.list[0].D));
+                            $("div#luck_base3").html(Math.round($("div#luck_base2").html() * temp.list[0].L));
+                            
+                            $("div#total").html(parseInt($("div#stamina_base2").html()) + 
+                                                parseInt($("div#attack_base2").html()) + 
+                                                parseInt($("div#defense_base2").html()) +
+                                                parseInt($("div#luck_base2").html()));
+                            
+                            $("table.one").html("");
+                            show_class_list(temp);
+                        });
+                        
+                        //function
+                        function show_class_list(data) {
+                            var row = data.list.length, col = 0, img = "", img2 = "", img3 = "";
+                            var TableData = "<tr class='danger'><td>名稱</td><td>圖片</td><td>類別</td><td>屬性</td><td>進化前</td><td>進化道具</td><td>體力</td><td>攻擊</td><td>防禦</td><td>幸運</td></tr>";
+
+                            for (var i = 0; i < row; i++) {
+                                if((i+1)%2 != 0) {
+                                    TableData += "<tr>";
+                                } else {
+                                    TableData += "<tr class=\"info\">";
+                                }
+
+                                if(is_limit(data.list[i].img.substring(0, 4))) {
+                                    img = "?";
+                                } else {
+                                    img = create_img(safe_img(data.list[i].img), "big", 0);
+                                }                        
+                                
+                                iName = data.list[i].use[0];
+                                if(is_limit(iName)) {
+                                    img3 = "?<br />" + iName;
+                                } else {
+                                    img3 = create_img(safe_img(iName), "big", 1) + "<br />" + iName;
+                                }
+
+                                switch(data.list[i].no) {
+                                    case "1":
+                                        img2 = "任一幻獸等級到達LV100以上, 即可使用.";
+                                        break;
+                                    case "2":
+                                        img2 = "任一幻獸等級到達LV10以上, 即可使用.";
+                                        break;
+                                    case "139":
+                                        img2 = "任一幻獸等級到達LV10以上, 即可使用. (低機率出現)";
+                                        break;
+                                    default:
+                                        img2 = get_img(data.list[i].previous, false);
+                                        break;
+                                }
+
+                                TableData += "<td width='200px'>" + data.list[i].name + "</td>";
+                                TableData += "<td>" + img + "</td>";
+                                TableData += "<td>" + data.list[i].class + "</td>";
+                                TableData += "<td>" + data.list[i].kind + "</td>";
+                                TableData += "<td>" + img2 + "</td>";
+                                TableData += "<td>" + img3 + "</td>";
+                                TableData += "<td>" + data.list[i].S + "</td>";
+                                TableData += "<td>" + data.list[i].A + "</td>";
+                                TableData += "<td>" + data.list[i].D + "</td>";
+                                TableData += "<td>" + data.list[i].L + "</td>";
+                                TableData += "</tr>";
+                            }
+                            $("table.one").append(TableData);                
+                        }
+
+                        function get_img(_no, _use) {
+                            var _return = "", html = "";
+                            if(typeof _use == 'undefined') {
+                                _use = true;
+                            }
+                            if(typeof _no !== 'string') {
+                                col_tmp = parseInt(12 / _no.length); 
+                                html += '<div class="container-fluid">';
+                                html += '<div class="row">';
+                                
+                                for(var i=0; i<_no.length; i++) {
+                                html += '<div class="col-md-' + col_tmp + '">';
+                                    html += get_img2(_no[i], _use);
+                                    html += '</div>';
+                                }
+                                
+                                html += '</div>';
+                                html += '</div>';
+                                _return = html;
+                            } else {
+                                _return = get_img2(_no, _use);
+                            }
+                            return _return;
+                        }
+                        
+                        //顯示幻獸以及他的變化
+                        function get_img2(_no, _use) {
+                            var data = monster_data(), iName = "";
+                            
+                            for(var i in data.list) {
+                                if(data.list[i].no == _no) {
+                                    iName = data.list[i].use[0];
+                                    if(is_limit(data.list[i].img.substring(0, 4))) {
+                                        img = "?<br />" + data.list[i].name;
+                                    } else {
+                                        img = create_img(safe_img(data.list[i].img), "small", 0) + "<br />" + data.list[i].name;
+                                    }
+                                    
+                                    if(is_limit(iName)) {
+                                        img2 = "?<br />" + iName;
+                                    } else {
+                                        img2 = create_img(safe_img(iName), "xsmall", 1) + "<br />" + iName;
+                                    }
+
+                                    html = '<div class="container-fluid">';
+                                    html += '  <div class="row">';
+                                    html += '    <div class="col-md-12">';
+                                    html += img;
+                                    html += '    </div>';
+                                    html += '  </div>';
+                                    
+                                    if(_use) {
+                                        html += '  <div class="row">';
+                                        html += '    <div class="col-md-12">';
+                                        html += img2;
+                                        html += "    </div>";
+                                        html += "  </div>";
+                                    }
+                                    
+                                    if(data.list[i].ps !== undefined) {
+                                        html += "<div><font color='#f00' size='1'>" + data.list[i].ps + "</font></div>";
+                                    }
+                                    html += "</div>";
+                                    return html;
+                                }
+                            }
+                            return "";                
+                        }
+                        
+                        function get_monster_for_select() {
+                            var data = monster_data(), row = data.list.length, option = "";
+
+                            for(var i=2; i<row; i++) {
+                                switch(data.list[i].class) {
+                                    case "F":
+                                    case "E":
+                                    case "D":
+                                    case "C":
+                                    case "B":
+                                        option += "<option value='" + data.list[i].no+"'>" + 
+                                                  data.list[i].class + ". " + data.list[i].name + " (" + data.list[i].use[0] + ")" +
+                                                  "</option>";
+                                }
+                            }
+
+                            $("select#evolution").append(option);
+                            option = "";
+                            for(var j=2; j<row; j++) {
+                                switch(data.list[j].class) {
+                                    case "A":
+                                    case "S":
+                                    case "SS":
+                                    case "SS+":
+                                        option += "<option value='" + data.list[j].no+"'>" + 
+                                                  data.list[j].class + ". " + data.list[j].name + " (" + data.list[j].use[0] + ")" + 
+                                                  "</option>";
+                                    }
+                            }
+
+                            $("select#evolution2").append(option);    
+                        }
+                        
+                        function safe_img(img_name) {
+                            var new_img_name = img_name + '.png';
+                            switch(img_name) {
+                                case "叛逆のスープ":
+                                    new_img_name = "湯.png";
+                                    break;
+                                case "魂の蓄壷":
+                                    new_img_name = "魂の蓄壷.jpeg";
+                                    break;
+                            }
+                            
+                            return new_img_name;
+                        }
+                        
+                        function is_limit(target) {
+                            var limit_list = limit_data(), limit = false;
+                            if(jQuery.inArray(target, limit_list) != -1) {
+                                limit = true;
+                            }
+                            return limit;
+                        }
+                        
+                        function create_img(src, _class, type) {
+                            var img_example = ["<img class='{_class}' src='img/monster/{src}' alt='' />",
+                                               "<img class='{_class}' src='img/item3/{src}' alt='' />"];
+                            return img_example[type].replace(/{_class}/, _class).replace(/{src}/, src);    
+                        }
+                        
+                        //data
+                        function limit_data() {
+                            return ["0111","0137","0139","0140","0141","0142","0143","0144","0145","0146","金色的鱗粉","華的蜜","世界樹的葉","鬼燈的實","精靈的微笑","禁じられた猛毒","破壊王の魂","合成獣の石板", "異種族の石板","量産型増強剤","?","転生の鍵","幻獣の繭"];
+                        }
+                        function monster_data() {
+                            return alldata;
+                        }  
+                    },
+                    xhrFields: {
+                        onprogress: function (event) {
+                            /*if (event.lengthComputable) {
+                                now = (event.loaded / event.total).toFixed(2);
+                                now = Math.floor(now * 100);
+                                //console.log(event.loaded + " / " + event.total);
+                                $("div.progress-bar")
+                                .attr("aria-valuemax", 100)
+                                .css("width", now + "%");
+                                
+                                $("span.text").html(now + " / 100");
+
+                                if(event.loaded  == event.total) {
+                                    $("span.text").html("Loading Done!");
+                                }
+                            }*/
+                        }
+                    },
+                    complete: function(){
+                        //$("div#bar").fadeOut(3000);
+                    }
+                });
+            });
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50817771-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>

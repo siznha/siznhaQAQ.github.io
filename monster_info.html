@@ -1,0 +1,900 @@
+<!--
+    genmono tools v2 beta | (c) 2015 | ∑(っ °Д °;)っ 20150125
+    author heroboy999 heroboy999@gmail.com
+    ##################################################
+    ##############################,,;#################
+    #############################;,,,;##t#############
+    ############################,,,,,,,,;;############
+    ############################,,,i,,,,,;;###########
+    ###########;;,,;############,,:;j,,,,,,i##########
+    ###########;,,,,,,,########i,:j:j::,,,,iit########
+    ##########;,,,::::,,#######,,:.......::,,;;#######
+    ###########,,,:...::########,,::::...:,,,,;#######
+    ################:.################..:j,,,#########
+    ################j.################...:,,,#########
+    #################i###############:..::,,,#########
+    ################################:..####,,#########
+    #######;;,,####################.##################
+    #######,;:,###########f###########################
+    #######,:..##...####L#GDDDD#######################
+    #######::.....######DDGfLGDGf#####################
+    ###,###..:;########LfLDGLDLfDD###########,,,,#####
+    #i;,,##..########fGLDGLfjfDGDGf##########,,,,t####
+    #;,,,..,#########GfffftffjffGfD########..:,ii#####
+    #;,,,..#########LGGfffjfjffffLDG##################
+    #t,jj..#######fffGLLffjtttjffLDGGG################
+    ###:...########GfffLLffttttfffLGG############i####
+    ###,:..########fftfGGfLjtjtffjfLL######..####;;###
+    ##,,,..########jttjLLftjfjffttLLLf#######.:,,,,;##
+    #,,,,..#######ftjtLtffjtttfftjLLLf########.,,;,;##
+    #####:,#######jtffjfffffffffLLGDLLD########.:ii,;#
+    #####:;#######jtffffjffffffLLGGGGGGDL######..,,,;#
+    ####,,#######DjtttttfffffLLGGGLLLLL########..,,i##
+    ##;,:,########fttttfffffLLGGGGGLffG########..,,;t#
+    #i,,:.#########GfLGGffffLGGGGDGLLG#########::,,,;#
+    #i,,,.,##.######fD,fGfffLGGGG;Lt##########.,,,,,;#
+    ##;,,:.#...#######fLjDLLLGGGjfL########..:,,,;####
+    ##i,,,:....#########GGGGGGGG##########:.##########
+    ###;,,,....#########################::############
+    ####;,,:..########################,::#############
+    #####;,,:..####################;,,:.##############
+    #######,:..###################i,,:..##############
+    ########,::.##################,,.::###############
+    ###########::#################::.:################
+    ############################..####################
+    ###########################:.#####################
+    ##################################################
+        
+-->
+<!DOCTYPE html>
+<html ng-app>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="heroboy999" name="author">
+        <title>幻獸物語2 工具箱</title>
+        <meta content="website" property="og:type">
+        <meta name="keywords" content="幻獸物語2,幻獣物語２">
+        <meta content="幻獸物語2 工具箱" property="og:title">
+        <meta content="提供簡單小工具" property="og:description">
+        <meta content="" property="og:image">
+        <meta content="http://shesheshe.github.io/genmono/" property="og:url">
+        <meta content="提供簡單小工具" name="description">
+        <meta content="幻獸物語2 工具箱" name="twitter:title">
+        <meta content="提供簡單小工具" name="twitter:description">
+        <meta content="幻獸物語2 工具箱" name="twitter:title">
+        <meta content="提供簡單小工具" name="twitter:description">
+        <meta content="" name="twitter:image:src">
+        <!--<link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/bootstrap-select.min.css">
+        <link rel="stylesheet" href="css/footable.core.css">
+        <style type="text/css">
+            img.big {
+                height: 50px;
+                width: 50px;
+            }
+            img.small {
+                height: 40px;
+                width: 40px;
+            }
+            img.xsmall {
+                height: 20px;
+                width: 20px;
+            }
+            .table td, th {
+                vertical-align: middle !important;
+                text-align: center !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="nav"></div>
+        
+        <!--<div class="container-fluid" id="bar">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="60" 
+                     aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span class="sr-only"></span>
+                    <span class="text"></span>
+                </div>
+            </div>
+        </div>-->
+        
+        <div class="container-fluid">
+            <!--<div class="row">
+                <div class="col-md-12">
+                    <h4>∑(っ °Д °;)っ 這是幻獸物語2簡單工具, 基於 <a href='http://genmono2.wiki.fc2.com/'>genmono wiki</a> 而製作. <a href="index.html">go to index.</a></h4>
+                </div>
+            </div>-->
+            <div class="row">
+                    <div class="col-md-12">
+                        <select class="selectpicker" id="class">
+                            <option value="">請選擇(class)</option>
+                            <option value="F">F</option>
+                            <option value="E">E</option>
+                            <option value="D">D</option>
+                            <option value="C">C</option>
+                            <option value="B">B</option>
+                            <option value="A">A</option>
+                            <option value="S">S</option>
+                            <option value="SS">SS</option>
+                            <option value="SS+">SS+</option>
+                            <option value="SS++">SS++</option>
+                            <option value="S_top_10">體力前10名</option>
+                            <option value="A_top_10">攻擊前10名</option>
+                            <option value="D_top_10">防禦前10名</option>
+                            <option value="L_top_10">運氣前10名</option>
+                        </select> <font color="#f00" size="4">or</font> 
+                        (
+                        <select class="selectpicker" id="evolution">
+                            <option value="">請選擇(class)</option>
+                            <option value="F">F</option>
+                            <option value="E">E</option>
+                            <option value="D">D</option>
+                            <option value="C">C</option>
+                            <option value="B">B</option>
+                            <option value="A">A</option>
+                            <option value="S">S</option>
+                            <option value="SS">SS</option>
+                            <option value="SS+">SS+</option>
+                        </select> <font color="#f00" size="4">and</font> 
+                        <!--<select class="selectpicker" id="evolution2">-->
+                        <select class="#" id="evolution2">
+                            <option value="">請選擇(上位)</option>
+                        </select>
+                        ) *進化路線圖龐大, 請盡量以PC觀看, 謝謝. </p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                            </table>
+                        </div>                        
+                    </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+        <div id="modal_popup"></div>
+        
+        <script type="text/javascript" src="js/angular.min.js"> </script>
+        <script type="text/javascript" src="js/jquery-2.1.3.min.js"> </script>
+        <!--<script type="text/javascript" src="js/bootstrap.min.js"> </script>-->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"> </script>
+        <script type="text/javascript" src="js/bootstrap-select.min.js"> </script>
+        <script type="text/javascript" src="js/i18n/defaults-zh_TW.min.js"> </script>
+        <script type="text/javascript" src="js/footable.js"> </script>
+        <script type="text/javascript">
+            $(function() {
+                console.log("∑(っ °Д °;)っ init monster_info");
+                var data_url = "https://spreadsheets.google.com/feeds/list/1UGovRIUz1Nkhim6NLLRH6Ke675ZS1-wZ6fKMUsEtrrQ/od6/public/values?alt=json";
+                //var data_url = "monster_data.json";
+                
+                var all_data = {};
+                        
+                $.when($.ajax({
+                        type: 'GET',
+                        url: "https://spreadsheets.google.com/feeds/list/1UGovRIUz1Nkhim6NLLRH6Ke675ZS1-wZ6fKMUsEtrrQ/od6/public/values?alt=json",
+                        dataType: "json",
+                        cache: false,
+                        error: function (xhr) {
+                            //console.log("error");
+                        },
+                        success: function (response) {
+                        //console.log(response);
+                            all_data.list = data_x(response);
+                        }}), 
+                       $.ajax({
+                        type: 'GET',
+                        url: "https://spreadsheets.google.com/feeds/list/1UGovRIUz1Nkhim6NLLRH6Ke675ZS1-wZ6fKMUsEtrrQ/2/public/values?alt=json",
+                        dataType: "json",
+                        cache: false,
+                        error: function (xhr) {
+                            //console.log("error");
+                        },
+                        success: function (response) {
+                            all_data.list2 = data_y(response);
+                        }}))
+                .done(function() {
+                        //init
+                        
+                        var alldata = all_data;
+                        
+                        show_class_list(select_monster_list("F"));
+                        //show_evolution_list(select_evolution_list("3"), 3);
+                        /*var monster_no = get_monster_for_select("F");
+                        var data = select_evolution_list(monster_no);
+                        $("table.table").html("");
+                        show_evolution_list(data, monster_no);*/
+                        
+                        $('table').footable();
+                        
+                        $("#nav").load("nav.html");
+                        $("#footer").load("footer.html");
+                        $("#modal_popup").load("modal_popup.html");
+                        
+                        //event
+                        $("select#class").change(function() {
+                            var data = select_monster_list($(this).val());
+                            $("table.table").html("");
+                            show_class_list(data);
+                        });
+
+                        $("select#evolution").change(function() {
+                            var monster_no = get_monster_for_select($(this).val());
+                            var data = select_evolution_list(monster_no);
+                            $("table.table").html("");
+                            show_evolution_list(data, monster_no);
+                        });
+                        
+                        $("select#evolution2").change(function() {
+                            var data = select_evolution_list($(this).val());
+                            $("table.table").html("");
+                            show_evolution_list(data, $(this).val());
+                        });
+                        
+                        $("li.no").on("click", function() {
+                            alert("沒有! 您可以關掉了.");
+                        });
+                        
+                        //function
+                        function show_class_list(data) {
+                            var row = data.list.length, col = 0, img = "", img2 = "", img3 = "";
+                            var TableData = "<tr class='danger'><td>名稱</td><td>圖片</td><td>類別</td><td>屬性</td><td>進化前</td><td>進化道具</td><td>體力</td><td>攻擊</td><td>防禦</td><td>幸運</td></tr>";
+
+                            for (var i = 0; i < row; i++) {
+                                if((i+1)%2 != 0) {
+                                    TableData += "<tr>";
+                                } else {
+                                    TableData += "<tr class=\"info\">";
+                                }
+
+                                if(is_limit(data.list[i].img.substring(0, 4))) {
+                                    img = "?";
+                                } else {
+                                    img = create_img(safe_img(data.list[i].img), "big", 0);
+                                }                        
+                                
+                                iName = data.list[i].use[0];
+                                if(is_limit(iName)) {
+                                    img3 = "?<br />" + iName;
+                                } else {
+                                    img3 = create_img(safe_img(iName), "big", 1) + "<br />" + iName;
+                                }
+
+                                switch(data.list[i].no) {
+                                    case "1":
+                                        img2 = "任一幻獸等級到達LV100以上, 即可使用.";
+                                        break;
+                                    case "2":
+                                        img2 = "任一幻獸等級到達LV10以上, 即可使用.";
+                                        break;
+                                    case "139":
+                                        img2 = "任一幻獸等級到達LV10以上, 即可使用. (低機率出現)";
+                                        break;
+                                    default:
+                                        img2 = get_img(data.list[i].previous, false);
+                                        break;
+                                }
+
+                                TableData += "<td width='200px'>" + data.list[i].name + "</td>";
+                                TableData += "<td>" + img + "</td>";
+                                TableData += "<td>" + data.list[i].class + "</td>";
+                                TableData += "<td>" + data.list[i].kind + "</td>";
+                                TableData += "<td>" + img2 + "</td>";
+                                TableData += "<td>" + img3 + "</td>";
+                                TableData += "<td>" + data.list[i].S + "</td>";
+                                TableData += "<td>" + data.list[i].A + "</td>";
+                                TableData += "<td>" + data.list[i].D + "</td>";
+                                TableData += "<td>" + data.list[i].L + "</td>";
+                                TableData += "</tr>";
+                            }
+                            $("table.table").append(TableData);                
+                        }
+
+                        function show_evolution_list(data, target) {
+                            var row = data[0].list.length;
+                            var _class = "{" + data[1] + "}";
+                            var TableData = "<thead>";
+                            TableData += "<tr class='danger'>";
+                            TableData += "<th>no</th>";
+                            TableData += "<th data-class='expand'>F</th>";
+                            TableData += "<th data-hide='phone,tablet'>E</th>";
+                            TableData += "<th data-hide='phone,tablet'>D</th>";
+                            TableData += "<th data-hide='phone,tablet'>C</th>";
+                            TableData += "<th data-hide='phone,tablet'>B</th>";
+                            TableData += "<th data-hide='phone,tablet'>A</th>";
+                            TableData += "<th data-hide='phone,tablet'>S</th>";
+                            TableData += "<th data-hide='phone,tablet'>SS</th>";
+                            TableData += "<th data-hide='phone,tablet'>SS+</th>";
+                            TableData += "<th data-hide='phone,tablet'>point</th></tr></thead><tbody>";
+
+                            for (var i = 0; i < row; i++) {
+                                if((i+1)%2 != 0) {
+                                    TableData += "<tr>";
+                                } else {
+                                    TableData += "<tr class=\"info\">";
+                                }
+
+                                if(data[0].list[i].ps !== undefined) {
+                                    TableData += "<td>" + (i+1) + data[0].list[i].ps + "</td>";
+                                } else {
+                                    TableData += "<td>" + (i+1) + "</td>";
+                                }
+
+                                t_value = get_all_value_by_value([data[0].list[i].f,
+                                                                  data[0].list[i].e,
+                                                                  data[0].list[i].d,
+                                                                  data[0].list[i].c,
+                                                                  data[0].list[i].b,
+                                                                  data[0].list[i].a,
+                                                                  data[0].list[i].s,
+                                                                  data[0].list[i].ss,
+                                                                  data[0].list[i].sss], target);
+                                
+                                TableData += "<td class='{f}'>" + get_img(data[0].list[i].f) + "</td>";
+                                TableData += "<td class='{e}'>" + get_img(data[0].list[i].e) + "</td>";
+                                TableData += "<td class='{d}'>" + get_img(data[0].list[i].d) + "</td>";
+                                TableData += "<td class='{c}'>" + get_img(data[0].list[i].c) + "</td>";
+                                TableData += "<td class='{b}'>" + get_img(data[0].list[i].b) + "</td>";
+                                TableData += "<td class='{a}'>" + get_img(data[0].list[i].a) + "</td>";
+                                TableData += "<td class='{s}'>" + get_img(data[0].list[i].s) + "</td>";
+                                TableData += "<td class='{ss}'>" + get_img(data[0].list[i].ss) + "</td>";
+                                TableData += "<td class='{sss}'>" + get_img(data[0].list[i].sss) + "</td>";
+                                
+                                TableData += "<td class='{point}'>";
+                                TableData += "<div class='col-md-12'>";
+                                TableData += "S:" + t_value.S + "<br />";
+                                TableData += "A:" + t_value.A + "<br />";
+                                TableData += "D:" + t_value.D + "<br />";
+                                TableData += "TOTAL:" + t_value.POINT + "<br />";
+                                TableData += "</div>";
+                                TableData += "</td>";
+                                TableData += "</tr>";
+
+                                TableData = TableData.replace(_class, "danger");
+                            }
+                            $("table.table").append(TableData + "</tbody>");                
+                        }
+                        
+                        function select_monster_list(_class) {
+                            var data = monster_data(), row = data.list.length, newdata = {"list":{}}, j = 0;
+                            if(_class == "all"){ return data; }
+                            
+                            var s = 0, no = 0, noo = 0;
+                            
+                            for(var i=0; i<data.list.length; i++)
+                            {
+                                data.list[i].is_select = 0;
+                            }
+                            
+                            if(_class == "S_top_10") {
+                                for(var k=0; k<10; k++)
+                                {
+                                    s = 0, no = 0, noo = 0;
+                                    for(var i=0; i<data.list.length; i++) {
+                                            if(data.list[i].is_select==0 && s==0) {
+                                                s = data.list[i].S;
+                                                no = data.list[i].no;
+                                                noo = data.list[i];
+                                            } else {
+                                                if(data.list[i].is_select==0 && parseInt(data.list[i].S)>=s) {
+                                                    s = data.list[i].S;
+                                                    no = data.list[i].no;
+                                                    noo = data.list[i];
+                                                }
+                                            }
+                                    }
+                                    for(var iii=0; iii<data.list.length; iii++) {
+                                            if(data.list[iii].no == no) {
+                                                data.list[iii].is_select = 1;
+                                            }
+                                    }
+                                    newdata.list[j++] = noo;
+                                }
+                                newdata.list.length = j;
+                                return newdata;
+                            }
+                            
+                            if(_class == "A_top_10") {
+                                for(var k=0; k<10; k++)
+                                {
+                                    s = 0, no = 0, noo = 0;
+                                    for(var i=0; i<data.list.length; i++) {
+                                            if(data.list[i].is_select==0 && s==0) {
+                                                s = data.list[i].A;
+                                                no = data.list[i].no;
+                                                noo = data.list[i];
+                                            } else {
+                                                if(data.list[i].is_select==0 && parseInt(data.list[i].A)>=s) {
+                                                    s = data.list[i].A;
+                                                    no = data.list[i].no;
+                                                    noo = data.list[i];
+                                                }
+                                            }
+                                            
+                                    }
+                                    
+                                    for(var iii=0; iii<data.list.length; iii++) {
+                                            if(data.list[iii].no == no) {
+                                                data.list[iii].is_select = 1;
+                                            }
+                                    }
+                                    newdata.list[j++] = noo;
+                                }
+                                newdata.list.length = j;
+                                return newdata;
+                            }
+                            
+                            if(_class == "D_top_10") {
+                                for(var k=0; k<10; k++)
+                                {
+                                    s = 0, no = 0, noo = 0;
+                                    for(var i=0; i<data.list.length; i++) {
+                                            if(data.list[i].is_select==0 && s==0) {
+                                                s = data.list[i].D;
+                                                no = data.list[i].no;
+                                                noo = data.list[i];
+                                            } else {
+                                                if(data.list[i].is_select==0 && parseInt(data.list[i].D)>=s) {
+                                                    s = data.list[i].D;
+                                                    no = data.list[i].no;
+                                                    noo = data.list[i];
+                                                }
+                                            }
+                                    }
+                                    for(var iii=0; iii<data.list.length; iii++) {
+                                            if(data.list[iii].no == no) {
+                                                data.list[iii].is_select = 1;
+                                            }
+                                    }
+                                    newdata.list[j++] = noo;
+                                }
+                                newdata.list.length = j;
+                                return newdata;
+                            }
+                            
+							if(_class == "L_top_10") {
+                                for(var k=0; k<10; k++)
+                                {
+                                    s = 0, no = 0, noo = 0;
+                                    for(var i=0; i<data.list.length; i++) {
+                                            if(data.list[i].is_select==0 && s==0) {
+                                                s = data.list[i].L;
+                                                no = data.list[i].no;
+                                                noo = data.list[i];
+                                            } else {
+                                                if(data.list[i].is_select==0 && data.list[i].L>=s) {
+                                                    s = data.list[i].L;
+                                                    no = data.list[i].no;
+                                                    noo = data.list[i];
+                                                }
+                                            }
+                                    }
+                                    for(var iii=0; iii<data.list.length; iii++) {
+                                            if(data.list[iii].no == no) {
+                                                data.list[iii].is_select = 1;
+                                            }
+                                    }
+                                    newdata.list[j++] = noo;
+                                }
+                                newdata.list.length = j;
+                                return newdata;
+                            }
+							
+                            for(var i=0; i<row; i++) {
+                                if(data.list[i].class == _class) {
+                                    newdata.list[j++] = data.list[i];
+                                }
+                            }
+                            newdata.list.length = j;
+                            return newdata;
+                        }
+                        
+                        function select_evolution_list(_no) {
+                            var data = evolution_data(), evolution_tmp = {"list":[]}, cnt = 0, _class = "";
+                            if(_no == "all"){ return data; }                    
+
+                            for(var i in data.list) { //row
+                                for(var j in data.list[i]) { //col
+                                    if(data.list[i][j]==_no) {
+                                        evolution_tmp.list[cnt++] = data.list[i];
+                                        _class = j;
+                                        break;
+                                    } else if(typeof data.list[i][j] !== 'string'){
+                                        for(var k in data.list[i][j]) { //col col
+                                            if(data.list[i][j][k]==_no) {
+                                                evolution_tmp.list[cnt++] = data.list[i];
+                                                _class = j;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            return [evolution_tmp, _class];
+                        }
+                        
+                        function get_img(_no, _use) {
+                            var _return = "", html = "";
+                            if(typeof _use == 'undefined') {
+                                _use = true;
+                            }
+                            if(typeof _no !== 'string') {
+                                col_tmp = parseInt(12 / _no.length); 
+                                html += '<div class="container-fluid">';
+                                html += '<div class="row">';
+                                for(var i=0; i<_no.length; i++) {
+                                    html += '<div class="col-md-' + col_tmp + '">';
+                                    html += get_img2(_no[i], _use);
+                                    html += '</div>';
+                                }
+                                
+                                html += '</div>';
+                                html += '</div>';
+                                _return = html;
+                            } else {
+                                _return = get_img2(_no, _use);
+                            }
+                            return _return;
+                        }
+                        
+                        //顯示幻獸以及他的變化
+                        function get_img2(_no, _use) {
+                            var data = monster_data(), iName = "";
+                            for(var i in data.list) {
+                                if(data.list[i].no == _no) {
+                                    iName = data.list[i].use[0];
+                                    if(is_limit(data.list[i].img.substring(0, 4))) {
+                                        img = "?<br />" + data.list[i].name;
+                                    } else {
+                                        img = create_img(safe_img(data.list[i].img), "small", 0) + "<br />" + data.list[i].name;
+                                    }
+                                    
+                                    if(is_limit(iName)) {
+                                        img2 = "?<br />" + iName;
+                                    } else {
+                                        img2 = create_img(safe_img(iName), "xsmall", 1) + "<br />" + iName;
+                                    }
+
+                                    html = '<div class="container-fluid">';
+                                    html += '  <div class="row">';
+                                    html += create_value_for_div(img, '', false);
+                                    html += create_value_for_div('S:', data.list[i].S, true);
+                                    html += create_value_for_div('A:', data.list[i].A, true);
+                                    html += create_value_for_div('D:', data.list[i].D, true);
+                                    html += '  </div>';
+                                    
+                                    if(_use) {
+                                        html += '  <div class="row">';
+                                        html += create_value_for_div(img2, '', false);
+                                        html += "  </div>";
+                                    }
+                                    
+                                    if(data.list[i].ps !== undefined) {
+                                        html += "<div><font color='#f00' size='1'>" + data.list[i].ps + "</font></div>";
+                                    }
+                                    html += "</div>";
+                                    return html;
+                                }
+                            }
+                            return "";                
+                        }
+                        
+                        function get_monster_for_select(_class) {
+                            var data = monster_data(), row = data.list.length, option = "";
+                            $("select#evolution2").html("");
+                            return_no = "";
+                            break_flag = 1;
+                            for(var j=2; j<row; j++) {
+                                if(data.list[j].class == _class) {
+                                    if(break_flag == 1) {
+                                        return_no = data.list[j].no;
+                                        break_flag++;
+                                    }
+                                    option += "<option value='" + data.list[j].no+"'>" + 
+                                              data.list[j].class + ". " + data.list[j].name + " (" + data.list[j].use[0] + ")" + 
+                                              "</option>";                        
+                                }
+                            }
+
+                            $("select#evolution2").append(option);
+                            return return_no;
+                        }
+                        
+                        function safe_img(img_name) {
+                            var new_img_name = img_name + '.png';
+                            switch(img_name) {
+                                case "叛逆のスープ":
+                                    new_img_name = "湯.png";
+                                    break;
+                                case "魂の蓄壷":
+                                    new_img_name = "魂の蓄壷.jpeg";
+                                    break;
+                            }
+                            
+                            return new_img_name;
+                        }
+                        
+                        function is_limit(target) {
+                            var limit_list = limit_data(), limit = false;
+                            if(jQuery.inArray(target, limit_list) != -1) {
+                                limit = true;
+                            }
+                            return limit;
+                        }
+                        
+                        function create_img(src, _class, type) {
+                            var img_example = ["<img class='{_class}' src='img/monster/{src}' alt='' />",
+                                               "<img class='{_class}' src='img/item3/{src}' alt='' />"];
+                            return img_example[type].replace(/{_class}/, _class).replace(/{src}/, src);    
+                        }
+                        
+                        function get_img_by_data(_no) {
+                            var data = monster_data();
+                            for(var i in data.list) {
+                                if(data.list[i].no == _no) {
+                                    return [data.list[i].img, data.list[i].name];
+                                }
+                            }
+                            return "";
+                        }
+                        
+                        function create_value_for_div(test, value, is_value) {
+                            html = '    <div class="col-md-12">';
+                            html += test;
+                            if(is_value) {
+                                if(test == 'S:') {
+                                    value = get_default_by_value(value / 3);
+                                }
+                                html += get_point_by_value(value, test);
+                            }
+                            html += '    </div>';
+                            return html;
+                        }
+                        
+                        function get_point_by_value(value) {
+                            return Math.ceil(((value * 1.111) * 100) / 100);
+                        }
+                        
+                        function get_default_by_value(value) {
+                            return (value * 100) / 100;
+                        }
+                        
+                        function get_all_value_by_value(_no, target) {
+                            var data = monster_data(), t_s = 0, t_a = 0, t_d = 0;
+                            _no = get_format_by_array(_no);
+                            for(var i in data.list) {
+                                if(jQuery.inArray(data.list[i].no, _no) != -1) {
+
+                                    t_s += get_point_by_value(get_default_by_value(data.list[i].S / 3));
+                                    t_a += get_point_by_value(get_default_by_value(data.list[i].A));
+                                    t_d += get_point_by_value(get_default_by_value(data.list[i].D));
+                                    
+                                    if(data.list[i].no == target) {
+                                        break;
+                                    }
+                                }
+                            }
+                            return {"S":t_s, "A":t_a, "D":t_d, "POINT":t_s + t_a + t_d};
+                        }
+                        
+                        function get_format_by_array(array) {
+                            var tmp_array = [];
+                            for(var i in array) {
+                                if(typeof array[i] !== 'string') {
+                                    for(var j in array[i]) {
+                                        tmp_array.push(array[i][j]);
+                                    }
+                                } else {
+                                    tmp_array.push(array[i]);
+                                }
+                            }
+                            delete array;
+                            return tmp_array;
+                        }
+                        
+                        function monster_data() {
+                            return {"list":alldata.list};
+                        }
+                        
+                        function evolution_data() {
+                            return {"list":alldata.list2};
+                        }
+                        
+                        //data
+                        function limit_data() {
+                            return [];
+                        }
+                });
+                
+                //try
+                function data_x(row_data) {
+                            row_data_tmp = row_data.feed.entry;
+                            delete row_data;
+                            row_data = row_data_tmp;
+                            var _data = [];
+                            var _datas = {};
+							//console.log(row_data);
+                            for(var row in row_data) {
+                                delete row_data[row].category;
+                                delete row_data[row].content;
+                                delete row_data[row].id;
+                                delete row_data[row].link;
+                                delete row_data[row].title;
+                                delete row_data[row].updated;
+
+                                if(row_data[row].gsx$s.$t != "")
+                                {
+                                    row_data[row].S = parseInt(row_data[row].gsx$s.$t);
+                                    row_data[row].S = row_data[row].gsx$s.$t;
+                                    delete row_data[row].gsx$s;
+                                }
+                                
+                                if(row_data[row].gsx$a.$t != "")
+                                {
+                                    row_data[row].A = parseInt(row_data[row].gsx$a.$t);
+                                    row_data[row].A = row_data[row].gsx$a.$t;
+                                    delete row_data[row].gsx$a;
+                                }
+                                
+                                if(row_data[row].gsx$d.$t != "")
+                                {
+                                    row_data[row].D = parseInt(row_data[row].gsx$d.$t);
+                                    row_data[row].D = row_data[row].gsx$d.$t;
+                                    delete row_data[row].gsx$d;
+                                }
+                                
+                                if(row_data[row].gsx$name.$t != "")
+                                {
+                                    row_data[row].name = row_data[row].gsx$name.$t;
+                                    delete row_data[row].gsx$name;
+                                }
+                                
+                                if(row_data[row].gsx$class.$t != "")
+                                {
+                                    row_data[row].class = row_data[row].gsx$class.$t;
+                                    delete row_data[row].gsx$class;
+                                }
+                                
+                                if(row_data[row].gsx$use.$t != "")
+                                {
+                                    row_data[row].use = row_data[row].gsx$use.$t.slice(0,-1).slice(1).split(",");
+                                    delete row_data[row].gsx$use;
+                                }
+                                
+                                if(row_data[row].gsx$no.$t != "")
+                                {
+                                    row_data[row].no = row_data[row].gsx$no.$t;
+                                    delete row_data[row].gsx$no;
+                                }
+                                
+                                if(row_data[row].gsx$ps.$t != "")
+                                {
+                                    row_data[row].ps = row_data[row].gsx$ps.$t;
+                                    delete row_data[row].gsx$ps;
+                                }
+                                else
+                                {
+                                    delete row_data[row].gsx$ps;
+                                }
+                                
+                                
+                                if(row_data[row].gsx$l.$t != "")
+                                {
+                                    row_data[row].L = parseInt(row_data[row].gsx$l.$t);
+                                    row_data[row].L = row_data[row].gsx$l.$t;
+                                    delete row_data[row].gsx$l;
+                                }
+                                
+                                if(row_data[row].gsx$img.$t != "")
+                                {
+                                    row_data[row].img = row_data[row].gsx$img.$t;
+                                    delete row_data[row].gsx$img;
+                                }
+                                
+                                if(row_data[row].gsx$kind.$t != "")
+                                {
+                                    row_data[row].kind = row_data[row].gsx$kind.$t;
+                                    delete row_data[row].gsx$kind;
+                                }
+                                
+                                if(row_data[row].gsx$previous.$t != "")
+                                {
+                                    if(row_data[row].gsx$previous.$t.slice(0,1) == "[")
+                                    {
+                                        row_data[row].previous = row_data[row].gsx$previous.$t.slice(0,-1).slice(1).split(",");
+                                    } 
+                                    else 
+                                    {
+                                        row_data[row].previous = row_data[row].gsx$previous.$t;
+                                    }
+                                    
+                                    delete row_data[row].gsx$previous;
+                                }
+                                else
+                                {
+                                    row_data[row].previous = row_data[row].gsx$previous.$t;
+                                    delete row_data[row].gsx$previous;
+                                }
+                                
+                                /*var tmp = row_data[row].s;
+                                if(tmp > 40) {
+                                    console.log(row_data[row]);
+                                }*/
+                                row_data[row].is_select = 0;
+                                _data[row] = row_data[row];
+                            }
+                            //_datas.list = _data;
+                            //console.log(_datas);
+                            
+                            return _data;
+                        }                
+                
+                function data_y(row_data) {
+                    row_data_tmp = row_data.feed.entry;
+                    delete row_data;
+                    row_data = row_data_tmp;
+                    
+                    var _data = [];
+                    var _datas = {};
+					//console.log(row_data);
+                    for(var row in row_data) {
+                        delete row_data[row].category;
+                        delete row_data[row].content;
+                        delete row_data[row].id;
+                        delete row_data[row].link;
+                        delete row_data[row].title;
+                        delete row_data[row].updated;
+
+                        row_data[row].sss = row_data[row].gsx$sss.$t.split(",");
+                        delete row_data[row].gsx$sss;
+                        
+                        row_data[row].ss = row_data[row].gsx$ss.$t.split(",");
+                        delete row_data[row].gsx$ss;
+                            
+                        row_data[row].s = row_data[row].gsx$s.$t.split(",");
+                        delete row_data[row].gsx$s;
+                        
+                        row_data[row].a = row_data[row].gsx$a.$t.split(",");
+                        delete row_data[row].gsx$a;
+                        
+                        row_data[row].b = row_data[row].gsx$b.$t.split(",");
+                        delete row_data[row].gsx$b;
+                        
+                        row_data[row].c = row_data[row].gsx$c.$t.split(",");
+                        delete row_data[row].gsx$c;
+                        
+                        row_data[row].d = row_data[row].gsx$d.$t.split(",");
+                        delete row_data[row].gsx$d;
+                        
+                        row_data[row].e = row_data[row].gsx$e.$t.split(",");
+                        delete row_data[row].gsx$e;
+                        
+                        row_data[row].f = row_data[row].gsx$f.$t.split(",");
+                        delete row_data[row].gsx$f;
+                        
+                        /*var tmp = row_data[row].s;
+                        if(tmp > 40) {
+                            console.log(row_data[row]);
+                        }*/
+                        
+                        _data[row] = row_data[row];
+                    }
+                    //_datas.list2 = _data;
+                    //console.log(_datas);
+                    return _data;
+                }
+                
+            });
+        </script>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-50817771-2', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
